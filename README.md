@@ -1,4 +1,4 @@
 I had a relatively difficult time completing this assignment. The languages and concepts used were unfamiliar to me, but I did learn a lot about what goes into a server and an API through completing it. Luckily, I had a lot of time to figure the concepts out, especially with the help of the lab assignment that we did last week. From then, a lot of my time was spent debugging and trying to figure out why my test cases wouldn't pass, which I resolved by noting the issues present in the test script itself ("master" branch instead of "main" branch, for example). Now, I have a more solid understanding of both REST and GitHub, and it was interesting to see the two interact with each other.\
 \
-SCREENCAST: https://drive.google.com/file/d/1d_tIVkxx_aJHAZ1SVx6NuvePwmej5H9W/view?usp=sharing
-\Also note that the video in the above link was recorded in 1440p. If Google Drive keeps it restricted to 360p and the console is unreadable, please download the mp4 file manually to view in original quality. 
+SCREENCAST: https://drive.google.com/file/d/1d_tIVkxx_aJHAZ1SVx6NuvePwmej5H9W/view?usp=sharing \
+Also note that the video in the above link was recorded in 1440p. If Google Drive keeps it restricted to 360p and the console is unreadable, please download the mp4 file manually to view in original quality. 
