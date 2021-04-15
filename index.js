@@ -11,8 +11,7 @@ var config = {};
 // Retrieve our api token from the environment variables.
 config.token = process.env.GITHUBTOKEN;
 
-if( !config.token )
-{
+if( !config.token ){
 	console.log(chalk`{red.bold GITHUBTOKEN is not defined!}`);
 	console.log(`Please set your environment variables with appropriate token.`);
 	console.log(chalk`{italic You may need to refresh your shell in order for your changes to take place.}`);
@@ -21,8 +20,7 @@ if( !config.token )
 
 console.log(chalk.green(`Your token is: ${config.token.substring(0,4)}...`));
 
-if (process.env.NODE_ENV != 'test')
-{
+if (process.env.NODE_ENV != 'test'){
 	(async () => {
 		await listAuthenicatedUserRepos();
 		await listBranches(userId, "SSW345");
@@ -33,8 +31,7 @@ if (process.env.NODE_ENV != 'test')
 	})()
 }
 
-function getDefaultOptions(endpoint, method)
-{
+function getDefaultOptions(endpoint, method){
 	var options = {
 		url: urlRoot + endpoint,
 		method: method,
@@ -47,8 +44,7 @@ function getDefaultOptions(endpoint, method)
 	return options;
 }
 
-async function getUser()
-{
+async function getUser(){
 	let options = getDefaultOptions("/user", "GET");
 
 	// Send a http request to url and specify a callback that will be called upon its return.
@@ -61,8 +57,7 @@ async function getUser()
 	});
 }
 
-function listAuthenicatedUserRepos()
-{
+function listAuthenicatedUserRepos(){
 	let options = getDefaultOptions("/user/repos?visibility=all", "GET");
 
 	// Send a http request to url and specify a callback that will be called upon its return.
@@ -92,8 +87,7 @@ function listAuthenicatedUserRepos()
 }
 
 // 1. Write code for listBranches in a given repo under an owner. See list branches
-async function listBranches(owner,repo)
-{
+async function listBranches(owner,repo){
 	let options = getDefaultOptions(`/repos/${owner}/${repo}/branches`, "GET");
 
 	// Send a http request to url and specify a callback that will be called upon its return.
@@ -106,13 +100,11 @@ async function listBranches(owner,repo)
 				reject(error);
 				return; // Terminate execution.
 			}
-
 			var obj = JSON.parse(body);
 			for (var i = 0; i < obj.length; i++) {
 				var name = obj[i].name;
 				console.log(name);
 			}
-			//console.debug( options );
 			resolve(obj);
 		});
 	});
