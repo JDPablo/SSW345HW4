@@ -105,6 +105,7 @@ async function listBranches(owner,repo){
 				var name = obj[i].name;
 				console.log(name);
 			}
+			//console.debug( options ); for debugging
 			resolve(obj);
 		});
 	});
